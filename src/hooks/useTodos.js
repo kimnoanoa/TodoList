@@ -12,9 +12,18 @@ function useTodos() {
     localStorage.setItem("todos", JSON.stringify(todos));
   }, [todos]);
 
-  const addTodo = (text) => {
-    setTodos([...todos, { id: Date.now(), text, done: false }]);
-  };
+const addTodo = (text) => {
+  setTodos([
+    ...todos,
+    {
+      id: Date.now(),
+      text,
+      done: false,
+      date: new Date().toISOString().split("T")[0] // YYYY-MM-DD
+    }
+  ]);
+};
+
 
   const deleteTodo = (id) => {
     setTodos(todos.filter((t) => t.id !== id));
