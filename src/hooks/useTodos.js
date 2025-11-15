@@ -16,18 +16,24 @@ function useTodos() {
         {
           id: Date.now(),
           text: "고양이 치치 밥 주기",
-          done: false,
-          date: today
+          done: true,
+          date: "2025-11-14"
         },
         {
           id: Date.now() + 1,
           text: "리액트 공부하기",
           done: false,
-          date: today
+          date: "2025-11-14"
         },
         {
           id: Date.now() + 2,
           text: "집 청소하기",
+          done: false,
+          date: "2025-11-15"
+        },
+        {
+          id: Date.now() + 3,
+          text: "헬스장 가기",
           done: false,
           date: today
         }

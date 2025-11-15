@@ -5,7 +5,8 @@ function useDarkMode() {
 
   useEffect(() => {
     const saved = JSON.parse(localStorage.getItem("darkMode"));
-    if (saved) setDark(saved);
+    if (saved !== null) setDark(saved);
+
   }, []);
 
   useEffect(() => {

@@ -24,6 +24,14 @@ function App() {
     >
       {/* 헤더 */}
       <Header dark={dark} toggleDarkMode={toggleDarkMode} />
+       <div className="flex justify-center mt-4 mb-4">
+        <button
+          onClick={toggleDarkMode}
+          className="px-4 py-2 rounded bg-yellow-300 text-black dark:bg-gray-800 dark:text-white shadow"
+        >
+          {dark ? "라이트 모드" : "다크 모드"}
+        </button>
+      </div>
 
       {/* 날짜 */}
       <div className="text-center text-gray-500 dark:text-gray-400 mt-6 mb-6">
